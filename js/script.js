@@ -54,7 +54,7 @@ button.addEventListener('click', function (event) {
 							console.log(bid);
 							console.log(rachetArray.length);
 						}
-					}, 1000)
+					}, 100)
 				}
 			}
 		}
