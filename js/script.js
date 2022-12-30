@@ -37,13 +37,11 @@ button.addEventListener('click', function (event) {
 				let random = Math.random() * 10;
 				let randomRound = Math.round(random * 100) / 100;
 				loos.classList.remove('_js-loos');
-				console.log(randomRound);
 				if (randomRound <= 0.90) {
 					randomRound = 1.10
 				} else if (gameBank[0].money < 200000) {
 					let randomloss = Math.random() * 2;
 					randomRound = Math.round(randomloss * 100) / 100;
-					console.log('Я знаю ')
 					if (randomRound <= 0.90) {
 						randomRound = 1.10
 					}
@@ -53,7 +51,7 @@ button.addEventListener('click', function (event) {
 				if (event.target.closest('._js-active-bid')) {
 					bid = +input.value;
 					gameBank[0].money += bid;
-					console.log(gameBank[0].money);
+					//console.log(gameBank[0].money);
 					userInfo.money = userInfo.money - bid;
 					user__money.textContent = userInfo.money;
 					let intervalId = setInterval(e => {
