@@ -108,7 +108,6 @@ function animate(time) {
 								lineWhite.classList.remove('_js-active');
 								gameReset.classList.remove('removeRest');
 								rachetHistory.push(rachetArray[rachetArray.length - 1])
-								console.log(rachetHistory);
 								neElement();
 								newUserHistoryNum();
 								ifNum();
