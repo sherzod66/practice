@@ -61,22 +61,22 @@ function animate(time) {
 					if (gameBank[0].money <= 100000) {
 						random = Math.random() * 1.4;
 						randomRound = Math.round(random * 100) / 100;
-						console.log('Стратегия1');
+						
 					} else if (gameBank[0].money <= 200000) {
 						random = Math.random() * 4;
 						randomRound = Math.round(random * 100) / 100;
-						console.log('Стратегия2');
+						
 					} else if (gameBank[0].money <= 250000) {
 						random = Math.random() * 6;
 						randomRound = Math.round(random * 100) / 100;
-						console.log('Стратегия2');
+						
 					}
 					else {
 						random = Math.random() * 11;
 						randomRound = Math.round(random * 100) / 100;
 					}
 					loos.classList.remove('_js-loos');
-					console.log(randomRound);
+					
 					if (randomRound <= 0.99) {
 						randomRound = 1.00
 					}
@@ -96,7 +96,7 @@ function animate(time) {
 							rachetArray.push(rachet);
 							tablo.textContent = rachet;
 							getWinMoney()
-							//console.log(rachetArray);
+							
 						} else if (rachet >= randomRound) {
 							clearInterval(intervalId)
 							loos.classList.add('_js-loos')
@@ -113,9 +113,6 @@ function animate(time) {
 								newUserHistoryNum();
 								ifNum();
 								rachetArray.length = 0;
-								//console.log(rachet);
-								//console.log(bid);
-								//console.log(rachetArray.length);
 							}, 2000)
 
 						}
@@ -141,13 +138,11 @@ button.addEventListener('click', function (event) {
 					newUserHistory();
 					userBidInfo.push(bid)
 					gameBank[0].money += bid;
-					console.log(gameBank[0].money);
 					userInfo.money = userInfo.money - bid;
 					user__money.textContent = userInfo.money;
 				} else {
 					bid = +input.value;
 					gameBank[0].money -= bid;
-					console.log(gameBank[0].money);
 					userInfo.money = userInfo.money + bid;
 					user__money.textContent = userInfo.money;
 					removeElement()
@@ -156,7 +151,6 @@ button.addEventListener('click', function (event) {
 				if (event.target.closest('._cancellation')) {
 					bid = +input.value;
 					gameBank[0].money -= bid;
-					console.log(gameBank[0].money);
 					userInfo.money = userInfo.money + bid;
 					user__money.textContent = userInfo.money;
 					button.classList.remove('_cancellation');
